@@ -41,6 +41,8 @@ Dormancy applies to both enterprise members and outside collaborators.
 
 {% ifversion ghes %}
 
+Dormant users are not automatically suspended. Consider suspending dormant users to release license seats. See [AUTOTITLE](/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/suspending-and-unsuspending-users).
+
 ## Viewing dormant users
 
 {% data reusables.enterprise-accounts.viewing-dormant-users %}
@@ -56,7 +58,7 @@ Dormancy applies to both enterprise members and outside collaborators.
 {% data reusables.enterprise_site_admin_settings.click-user %}
 1. In the **User info** section, view the status of the user's account. Any users labeled with "{% octicon "hourglass" aria-hidden="true" %} Dormant" are dormant, and users labeled with "{% octicon "hourglass" aria-hidden="true" %} "Active" are not.
 
-   ![Screenshot of the "User info" section of the site admin page for a user. The "User info" heading is highlighted in dark orange. Under the heading, the user is marked as active.](/assets/images/enterprise/stafftools/active-user.png)
+   ![Screenshot of the "User info" section for a user. The "User info" heading is outlined. Under the heading, the user is marked as active.](/assets/images/enterprise/stafftools/active-user.png)
 
 ## Configuring the dormancy threshold
 
@@ -75,7 +77,7 @@ Dormancy applies to both enterprise members and outside collaborators.
 
 {% data reusables.enterprise-accounts.access-enterprise %}
 {% data reusables.enterprise-accounts.enterprise-accounts-compliance-tab %}
-1. Scroll to "Other."
+1. Scroll to "Reports".
 1. Optionally, to generate a new report, next to "Dormant Users", click **New report**.
-1. Under "Recent reports", next to the report you want to download, click {% octicon "download" aria-hidden="true" %} **Download**.
+1. Under "Recent reports", next to the report you want to download, click **{% octicon "download" aria-hidden="true" %} Download**.
 {% endif %}

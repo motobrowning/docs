@@ -31,12 +31,32 @@
   },
   {
     "action": "api.request",
-    "description": "An API request was made to a security-significant endpoint for the enterprise. This event is only included if API Request Events is enabled in the enterprise's audit log settings. This event is only available via audit log streaming.",
+    "description": "An API request was made to an endpoint for the enterprise, or an enterprise owned resource. This event is only included if API Request Events is enabled in the enterprise's audit log settings. This event is only available via audit log streaming.",
     "docs_reference_links": "/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#enabling-audit-log-streaming-of-api-requests"
   },
   {
     "action": "artifact.destroy",
     "description": "A workflow run artifact was manually deleted.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "audit_log_streaming.check",
+    "description": "A manual check of the endpoint configured for audit log streaming was performed.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "audit_log_streaming.create",
+    "description": "An endpoint was added for audit log streaming.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "audit_log_streaming.destroy",
+    "description": "An audit log streaming endpoint was deleted.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "audit_log_streaming.update",
+    "description": "An endpoint configuration was updated for audit log streaming, such as the stream was paused, enabled, or disabled.",
     "docs_reference_links": "N/A"
   },
   {
@@ -720,6 +740,41 @@
     "docs_reference_links": "/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners#about-self-hosted-runners"
   },
   {
+    "action": "enterprise_team.add_member",
+    "description": "A new member was added to the enterprise team or an IdP group linked to an enterprise team, or an IdP group was linked to an enterprise team.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "enterprise_team.copilot_assignment",
+    "description": "A license for GitHub Copilot was assigned to an enterprise team.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "enterprise_team.copilot_unassignment",
+    "description": "A license for GitHub Copilot was unassigned from an enterprise team.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "enterprise_team.create",
+    "description": "A new enterprise team was created.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "enterprise_team.destroy",
+    "description": "An enterprise team was deleted.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "enterprise_team.remove_member",
+    "description": "A member was removed from the enterprise team or an IdP group linked to an enterprise team, or an IdP group was unlinked from an enterprise team.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "enterprise_team.rename",
+    "description": "The name of an enterprise team was changed.",
+    "docs_reference_links": "N/A"
+  },
+  {
     "action": "environment.add_protection_rule",
     "description": "A GitHub Actions deployment protection rule was created via the API.",
     "docs_reference_links": "/actions/deployment/targeting-different-environments/using-environments-for-deployment#deployment-protection-rules"
@@ -800,6 +855,16 @@
     "docs_reference_links": "N/A"
   },
   {
+    "action": "external_group.scim_api_failure",
+    "description": "Failed external group SCIM API request.",
+    "docs_reference_links": "/rest/scim/scim"
+  },
+  {
+    "action": "external_group.scim_api_success",
+    "description": "Successful external group SCIM API request. Excludes GET API requests.",
+    "docs_reference_links": "/rest/scim/scim"
+  },
+  {
     "action": "external_group.unlink",
     "description": "An external group was unlinked to a GitHub team.",
     "docs_reference_links": "N/A"
@@ -816,17 +881,42 @@
   },
   {
     "action": "external_identity.deprovision",
-    "description": "N/A",
+    "description": "An external identity was deprovisioned, suspending the linked GitHub user.",
     "docs_reference_links": "N/A"
   },
   {
     "action": "external_identity.provision",
-    "description": "N/A",
+    "description": "An external identity was created and linked to a GitHub user.",
     "docs_reference_links": "N/A"
   },
   {
+    "action": "external_identity.scim_api_failure",
+    "description": "Failed external identity SCIM API request.",
+    "docs_reference_links": "/rest/scim/scim"
+  },
+  {
+    "action": "external_identity.scim_api_success",
+    "description": "Successful external identity SCIM API request. Excludes GET API requests.",
+    "docs_reference_links": "/rest/scim/scim"
+  },
+  {
     "action": "external_identity.update",
-    "description": "N/A",
+    "description": "An external identity was updated.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "gist.create",
+    "description": "A gist was created.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "gist.destroy",
+    "description": "A gist was deleted.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "gist.visibility_change",
+    "description": "The visibility of a gist was updated.",
     "docs_reference_links": "N/A"
   },
   {
@@ -1371,7 +1461,7 @@
   },
   {
     "action": "org.delete",
-    "description": "An organization was deleted by a user-initiated background job.",
+    "description": "An organization was deleted by a user or staff.",
     "docs_reference_links": "N/A"
   },
   {
@@ -3293,6 +3383,16 @@
     "action": "user.disable_sockpuppet_disallowed",
     "description": "N/A",
     "docs_reference_links": "N/A"
+  },
+  {
+    "action": "user_email.confirm_claim",
+    "description": "An enterprise managed user claimed an email address.",
+    "docs_reference_links": "N/A"
+  },
+  {
+    "action": "user_email.mark_as_unclaimed",
+    "description": "N/A",
+    "docs_reference_links": "An enterprise managed user unclaimed an email address."
   },
   {
     "action": "user.enable_collaborators_only",

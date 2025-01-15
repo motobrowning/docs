@@ -1,17 +1,14 @@
 ---
 title: Managing Copilot as an individual subscriber
 shortTitle: Manage for individual
-intro: 'Individual users can subscribe to {% data variables.product.prodname_copilot_individuals_short %} for personal use.'
+intro: 'Individual users can subscribe to {% data variables.product.prodname_copilot_pro_short %} or {% data variables.product.prodname_copilot_free_short %} for personal use.'
 versions:
   feature: copilot
 topics:
   - Copilot
 children:
-  - /subscribing-to-copilot-as-an-individual-user
-  - /installing-github-copilot-extensions-for-your-personal-account
+  - /managing-your-github-copilot-pro-subscription
+  - /about-github-copilot-free
   - /managing-copilot-policies-as-an-individual-subscriber
-  - /modifying-your-copilot-subscription-as-an-individual-user
-  - /canceling-your-copilot-trial-as-an-individual-user
-  - /canceling-copilot-as-an-individual-user
+  - /extending-the-capabilities-of-github-copilot-in-your-personal-account
 ---
-

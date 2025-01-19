@@ -1821,6 +1821,12 @@
       "requestPath": "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}"
     },
     {
+      "slug": "update-pre-receive-hook-enforcement-for-an-organization",
+      "subcategory": "org-pre-receive-hooks",
+      "verb": "patch",
+      "requestPath": "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}"
+    },
+    {
       "slug": "remove-pre-receive-hook-enforcement-for-an-organization",
       "subcategory": "org-pre-receive-hooks",
       "verb": "delete",
@@ -1836,6 +1842,12 @@
       "slug": "get-a-pre-receive-hook-for-a-repository",
       "subcategory": "repo-pre-receive-hooks",
       "verb": "get",
+      "requestPath": "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}"
+    },
+    {
+      "slug": "update-pre-receive-hook-enforcement-for-a-repository",
+      "subcategory": "repo-pre-receive-hooks",
+      "verb": "patch",
       "requestPath": "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}"
     },
     {
@@ -2335,7 +2347,7 @@
       "requestPath": "/organizations"
     },
     {
-      "slug": "deprecated---list-custom-repository-roles-in-an-organization",
+      "slug": "closing-down---list-custom-repository-roles-in-an-organization",
       "subcategory": "custom-roles",
       "verb": "get",
       "requestPath": "/organizations/{organization_id}/custom_roles"
@@ -2501,90 +2513,6 @@
       "subcategory": "members",
       "verb": "delete",
       "requestPath": "/orgs/{org}/memberships/{username}"
-    },
-    {
-      "slug": "list-organization-fine-grained-permissions-for-an-organization",
-      "subcategory": "organization-roles",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/organization-fine-grained-permissions"
-    },
-    {
-      "slug": "get-all-organization-roles-for-an-organization",
-      "subcategory": "organization-roles",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/organization-roles"
-    },
-    {
-      "slug": "create-a-custom-organization-role",
-      "subcategory": "organization-roles",
-      "verb": "post",
-      "requestPath": "/orgs/{org}/organization-roles"
-    },
-    {
-      "slug": "remove-all-organization-roles-for-a-team",
-      "subcategory": "organization-roles",
-      "verb": "delete",
-      "requestPath": "/orgs/{org}/organization-roles/teams/{team_slug}"
-    },
-    {
-      "slug": "assign-an-organization-role-to-a-team",
-      "subcategory": "organization-roles",
-      "verb": "put",
-      "requestPath": "/orgs/{org}/organization-roles/teams/{team_slug}/{role_id}"
-    },
-    {
-      "slug": "remove-an-organization-role-from-a-team",
-      "subcategory": "organization-roles",
-      "verb": "delete",
-      "requestPath": "/orgs/{org}/organization-roles/teams/{team_slug}/{role_id}"
-    },
-    {
-      "slug": "remove-all-organization-roles-for-a-user",
-      "subcategory": "organization-roles",
-      "verb": "delete",
-      "requestPath": "/orgs/{org}/organization-roles/users/{username}"
-    },
-    {
-      "slug": "assign-an-organization-role-to-a-user",
-      "subcategory": "organization-roles",
-      "verb": "put",
-      "requestPath": "/orgs/{org}/organization-roles/users/{username}/{role_id}"
-    },
-    {
-      "slug": "remove-an-organization-role-from-a-user",
-      "subcategory": "organization-roles",
-      "verb": "delete",
-      "requestPath": "/orgs/{org}/organization-roles/users/{username}/{role_id}"
-    },
-    {
-      "slug": "get-an-organization-role",
-      "subcategory": "organization-roles",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/organization-roles/{role_id}"
-    },
-    {
-      "slug": "update-a-custom-organization-role",
-      "subcategory": "organization-roles",
-      "verb": "patch",
-      "requestPath": "/orgs/{org}/organization-roles/{role_id}"
-    },
-    {
-      "slug": "delete-a-custom-organization-role",
-      "subcategory": "organization-roles",
-      "verb": "delete",
-      "requestPath": "/orgs/{org}/organization-roles/{role_id}"
-    },
-    {
-      "slug": "list-teams-that-are-assigned-to-an-organization-role",
-      "subcategory": "organization-roles",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/organization-roles/{role_id}/teams"
-    },
-    {
-      "slug": "list-users-that-are-assigned-to-an-organization-role",
-      "subcategory": "organization-roles",
-      "verb": "get",
-      "requestPath": "/orgs/{org}/organization-roles/{role_id}/users"
     },
     {
       "slug": "list-outside-collaborators-for-an-organization",
@@ -3563,7 +3491,7 @@
       "requestPath": "/repos/{owner}/{repo}/autolinks/{autolink_id}"
     },
     {
-      "slug": "check-if-automated-security-fixes-are-enabled-for-a-repository",
+      "slug": "check-if-dependabot-security-updates-are-enabled-for-a-repository",
       "subcategory": "repos",
       "verb": "get",
       "requestPath": "/repos/{owner}/{repo}/automated-security-fixes"
@@ -3767,19 +3695,19 @@
       "requestPath": "/repos/{owner}/{repo}/tags"
     },
     {
-      "slug": "deprecated---list-tag-protection-states-for-a-repository",
+      "slug": "closing-down---list-tag-protection-states-for-a-repository",
       "subcategory": "tags",
       "verb": "get",
       "requestPath": "/repos/{owner}/{repo}/tags/protection"
     },
     {
-      "slug": "deprecated---create-a-tag-protection-state-for-a-repository",
+      "slug": "closing-down---create-a-tag-protection-state-for-a-repository",
       "subcategory": "tags",
       "verb": "post",
       "requestPath": "/repos/{owner}/{repo}/tags/protection"
     },
     {
-      "slug": "deprecated---delete-a-tag-protection-state-for-a-repository",
+      "slug": "closing-down---delete-a-tag-protection-state-for-a-repository",
       "subcategory": "tags",
       "verb": "delete",
       "requestPath": "/repos/{owner}/{repo}/tags/protection/{tag_protection_id}"

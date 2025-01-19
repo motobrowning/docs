@@ -53,7 +53,7 @@ If you want to preserve files outside the `/workspaces` directory over a rebuild
 ```json
 {
     "image": "mcr.microsoft.com/devcontainers/base:alpine",
-    "postCreateCommand": ".devcontainer/postCreate.sh"
+    "postCreateCommand": "chmod +x .devcontainer/postCreate.sh && .devcontainer/postCreate.sh"
 }
 ```
 
@@ -66,4 +66,4 @@ ln -sf $PWD/.devcontainer/config $HOME/config && set +x
 
 ## Further reading
 
-* "[AUTOTITLE](/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)"
+* [AUTOTITLE](/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
